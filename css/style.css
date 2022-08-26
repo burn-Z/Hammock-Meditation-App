@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "a a a a s s"
+    "a a a a s s"
+    "d d d d s s"
+    "d d d d s s";
+  transition: opacity 500ms ease-in-out;
+}
+.inactive {
+  opacity: 0;
+}
+
+.audio {
+  grid-area: a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio img {
+  width: 50px;
+  cursor: pointer;
+}
+.audio .progress {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 40px;
+}
+
+.audio .progress svg {
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: -1;
+}
+
+.audio .progress .audio-remaining-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.seasons {
+  grid-area: s;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40% 0;
+}
+.seasons .season img {
+  width: 200px;
+  cursor: pointer;
+}
+.toggle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .video video {
+    height: 100%;
+  }
+
+  .app {
+    grid-template-areas:
+      "a"
+      "a"
+      "a"
+      "d";
+  }
+
+  .audio .progress {
+    width: 175px;
+    height: 175px;
+
+    margin: 0 10px;
+  }
+  .audio .play img,
+  .pause img {
+    width: 40px;
+  }
+  .audio .progress svg {
+    width: 175px;
+    height: 175px;
+  }
+  .audio .progress .rect1,
+  .rect {
+    width: 125px;
+    height: 125px;
+  }
+  .audio .progress .audio-remaining-time {
+    font-size: 1.75rem;
+  }
+
+  .seasons {
+    position: absolute;
+    top: 20px;
+    left: -250px;
+    padding: 5px;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    transition: left 500ms ease-in-out;
+  }
+  .open {
+    left: 0px;
+  }
+  .seasons .season {
+    margin-left: 10px;
+  }
+  .seasons .season img {
+    width: 50px;
+    filter: none;
+  }
+
+  .toggle-menu {
+    display: inline-flexbox;
+    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: all 500ms ease-in-out;
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
+  .toggle-menu:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  .toggle-menu img {
+    width: 20px;
+  }
+}

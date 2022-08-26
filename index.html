@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@600;700&family=Shrikhand&display=swap" rel="stylesheet">    
+    <title>Hammock</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<h1 style="text-align:center; font-size: 90px;
+color:rgb(255, 255, 255); font-family:'Montserrat' ">Hammock Meditation</h1>
+<h2 style="text-align:center;font-size: 40px; color: rgb(255, 255, 255); font-family:'Montserrat'">Relaxation Redefined</h2>
+<p style="text-align:center;font-size: 25px; color: rgb(255, 255, 255); font-family:'Montserrat'">Press the play button and you will be able to enter a mode of serenity.</p>
+
+<body>
+
+    <div class="video">
+        <video autoplay loop>
+            <source src="./assets/video/ocean.mp4" type="video/mp4">
+        </video>
+    </div>
+   
+    <div class="app">
+        <div class="audio">
+            <audio>
+                <source src="./assets/audio/focus.mp3" type="audio/mpeg">
+            </audio>
+            <div class="pause">
+                <img src="./assets/img/pause-button.png" alt="pause">
+            </div>
+            <div class="play">
+                <img src="./assets/img/play-button.png" alt="play">
+            </div>
+        </div>
+
+        <div class="seasons">
+            <div class="season" video-src="./assets/video/ocean.mp4">
+                <img src="./assets/img/relax.jpg" alt="relax">
+            </div>
+            <div class="season" video-src="./assets/video/relax.mp4">
+                <img src="./assets/img/sleep.jpg" alt="sleep">
+            </div>
+            <div class="season" video-src="./assets/video/movement.mp4">
+                <img src="./assets/img/movement.jpg" alt="movement">
+            </div>
+            <div class="season" video-src="./assets/video/focus.mp4">
+                <img src="./assets/img/focus.jpg" alt="focus">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
