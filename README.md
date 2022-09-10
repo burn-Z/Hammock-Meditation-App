@@ -23,7 +23,10 @@
   * We will work as a team and build out all the necessary features to make Hammock the go-to app for those who seek serenity through a digital device. :)
 
 ## Built With
-  * css * html * javascript * miro
+  * css 
+  * html 
+  * javascript 
+  * miro
 
 ## Try it out
   * [GitHub_Repo](https://github.com/philipjpark/Hammock-Meditation-App/blob/master/index.html)
